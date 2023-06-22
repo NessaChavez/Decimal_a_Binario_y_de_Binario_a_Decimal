@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+void DecBin(int decimal) {
+    if (decimal == 0) {
+        printf("0");
+        return;
+    }
+
+    int binario[32]; 
+    int a = 0;
+
+    while (decimal > 0) {
+        binario[a] = decimal % 2;
+        decimal = decimal / 2;
+        a++;
+    }
+
+    for (int b = a - 1; b >= 0; b--) {
+        printf("%d", binario[b]);
+    }
+}
+
+void BinDec(long binario) {
+    int decimal = 0;
+    int base = 1;
+
+    while (binario > 0) {
+        int ultnum = binario % 10;
+        binario = binario / 10;
+        decimal += ultnum * base;
+        base = base * 2;
+    }
+
+    printf("%d", decimal);
+}
+
+int main() {
+    int NumeroDecimal;
+    printf("Ingrese el número decimal: ");
+    scanf("%d", &NumeroDecimal);
+
+    printf("Su número decimal corresponde a ");
+    DecBin(NumeroDecimal);
+    printf(" de acuerdo al Sistema Binario");
+
+    printf("\n");
+    printf("\n");
+
+    long NumeroBinario;
+    printf("Ingrese un número binario: ");
+    scanf("%lld", &NumeroBinario);
+
+    printf("Su número binario corresponde a ");
+    BinDec(NumeroBinario);
+    printf(" de acuerdo al Sistema de Numeración Decimal");
+
+    printf("\n");
+
+    return 0;
+}
