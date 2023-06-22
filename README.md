@@ -28,10 +28,6 @@ Para pasar un número del sistema decimal al binario debemos dividirlo entre 2 h
 
 Tomamos entonces los residuos y el último cociente en orden inverso y obtenemos que 37 equivale a 100101 en el sistema binario.
 
-Lo anterior se puede expresar de la siguiente forma:
-
-![image](https://github.com/NessaChavez/Decimal-a-Binario/assets/137378640/3253319b-a54a-433b-885c-c5e185becf68)
-
 Asimismo, para cambiar del sistema binario al decimal se tendría que multiplicar cada dígito por 2 elevado por la respectiva potencial. Es decir, volviendo al ejemplo de arriba sería:
 
 (1*(2^5))+(0*(2^4))+(0*(2^3))+(1*(2^2))+(0*(2^1))+(1*(2^0))= 32+0+0+4+0+1= 37
